@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
+  <title>Ohmyfood</title>
+</head>
+</head>
+<body>
+  
+  <h1 class="logo">Ohmyfood</h1>
+  
+  <%- include('../partials/header/header1.html'); %>
+  
+  
+  <section class="grid-container">
+   <a href="la-palette-du-gout.html">
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "jay-wennington-N_Y88TWmGwA-unsplash",
+    "titre":"la palette du goût",
+    "adresse" : "Menilmontant",
+  }); %>
+</a>
+<a href="la-note-enchantee.html">
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "stil-u2Lp8tXIcjw-unsplash",
+    "titre":"La note enchantée",
+    "adresse" : "Charonne",
+  }); %>
+</a>
+<a href="francaise.html">
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "toa-heftiba-DQKerTsQwi0-unsplash",
+    "titre":"A la Française",
+    "adresse" : "Cité rouge",
+  }); %>
+</a>
+<a href="le-delice-des-sens.html">
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash",
+    "titre":"Le délice des sens",
+    "adresse" : "Folie-Méricourt",
+  }); %>
+</a>
+  
+</section>
+  
+  
+  <%- include('../partials/footer/footer.html'); %>
+</body>
+</html>

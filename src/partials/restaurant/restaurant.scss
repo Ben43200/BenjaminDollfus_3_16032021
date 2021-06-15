@@ -1,0 +1,87 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary : #99E2D0;
+$radius:border-radius 20px;
+
+img{
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px;
+  
+}
+section{
+  h2{
+      font-size:30px;
+  }
+}
+
+.card{
+height:300px;
+background-color: white;
+border-radius: 20px;
+margin-top:50px;
+}
+
+// .menu__details{
+//   display:flex;
+//   justify-content: space-around;
+// }
+
+
+// .custom-checkbox input[type="checkbox"],
+// .custom-checkbox .checked {
+//     display: none;
+// }
+
+// .custom-checkbox input[type="checkbox"]:checked ~ .checked
+// {
+//     display: inline-block;
+    
+    
+// }
+
+// .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+// {
+//     display: none;
+    
+// }
+
+
+
+// .fa.fas.fa-heart{
+//     position:absolute;
+//     color:$primary;
+    
+    
+// }
+
+
+
+// .fa.far.fa-heart{
+//     position: absolute;
+//     color:white;
+//     font-size: 25px;
+//     left:2px;
+//     top:2px;
+    
+// }
+// .fa.far.fa-heart:hover{
+//   cursor: pointer;
+//   transition: color 1s ease-out;
+//   color:$primary;
+//   position: absolute;
+  
+  
+  
+// }
+// .like{
+//   position: relative;
+ 
+  
+  
+// }
+// .fa-heart{
+//   font-size:30px;
+//   color:$primary;
+// }

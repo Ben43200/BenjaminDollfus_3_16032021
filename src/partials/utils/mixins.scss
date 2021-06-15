@@ -1,0 +1,100 @@
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+    /* fallback/image non-cover color */
+    background-color: $from;
+  
+    /* Firefox 3.6+ */
+    background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Safari 4+, Chrome 1+ */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+  
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* IE10+ */
+    background: -ms-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Standard */
+    background: linear-gradient(to right, $from 0%, $to $stop);
+  
+    /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+  }
+
+
+  //The mixin that will permit to display correctly the vector as mask with appropriate image
+@mixin background-svg-content($image, $color, $height, $width) {  
+    background-image: none;
+    background-color: $color;
+    background-size: auto;
+    display: inline-block;
+    -webkit-mask-image:  url($image);
+    mask-image: url($image);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+@mixin background-svg($image, $altimage : $image, $color : #999999, $height : 20px, $width : 20px) {  
+    width: $width;
+    height: $height;
+    //For ie 9+ browsers (alternative image is displayed)
+    @media screen\0 {   
+        background-image: url($altimage);
+        background-size: $width $height;
+    }
+    //For edge browsers (alternative image is displayed)
+    @supports (-ms-ime-align:auto) {   
+        background-image: url($altimage);
+        background-size: $width $height;
+    }
+    //For webkit compatible browsers but we exclude edge that does not display correctly the image
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        @supports (not (-ms-ime-align:auto)) { 
+            //Calls the other mixin
+            @include background-svg-content($image, $color, $height, $width);
+        }
+    }
+    //At last for FF
+    @-moz-document url-prefix() {
+        @include background-svg-content($image, $color, $height, $width);
+    }
+}
+
+@mixin gradient-vertical($startColor,$endColor) {
+    background-color: mix($startColor, $endColor, 60%);
+    background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+    background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+  }
+  @mixin radius($borderRadius){
+      border-radius: 5px;
+      padding: 10px;
+      background-color: lighten($tertiary, 20);
+      
+  }
+
+  @mixin heart{
+    font-size: 25px;
+    margin-right: 3px;
+     margin-top:25px;
+    
+  }
+
+  @mixin shadow ($tertiary){
+    box-shadow: 1px 1px 2px ; 
+   
+  }
+      

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      grid-container {
+    display: grid;
+    grid-template-areas: "titre prix coche""texte prix coche";
+    grid-template-columns: auto 3rem auto;
+    grid-template-rows: repeat(2, 100px);
+    /* background-color: black; */
+    width: 15rem;
+    transition: all 2s;
+    box-sizing: border-box;
+  }
+
+  
+  grid-container:hover .coche{
+    width: 3rem;
+  }
+  grid-container:hover .titre{
+    min-width: 6rem;
+  }
+
+  
+  grid-item {
+    background-color: lightgreen;
+  }
+  .titre{
+    grid-area: titre;
+    min-width: 9rem;
+    transition: all 1s;
+  }
+.texte{
+  grid-area: texte;
+}
+.prix{
+  grid-area: prix;
+}
+.coche{
+  grid-area: coche;
+  width: 0;
+  transition: all 1s;
+  overflow: hidden;
+}
+  </style>
+</head>
+<body>
+
+  <grid-container>
+    <grid-item class="titre">titre</grid-item>
+    <grid-item class="texte">texte</grid-item>
+    <grid-item class="prix">prix</grid-item>
+    <grid-item class="coche">coche</grid-item>
+  </grid-container>
+</body>
+</html>

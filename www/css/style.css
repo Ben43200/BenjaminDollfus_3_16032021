@@ -1,0 +1,588 @@
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+body {
+  margin: auto;
+  font-family: 'roboto', sans-serif;
+  max-height: auto; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+/**
+
+
+header{
+  background-color: lighten($tertiary, 20);
+  height: 300px;
+  
+}
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px;
+}
+.place{
+  display:flex;
+  background-color: darken($tertiary, 10);
+  justify-content: center;
+  padding:10px;
+}
+.fas{
+  margin-right:10px;
+}
+.accroche_title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:30px;
+  justify-content: space-between;
+  height:175px;
+  
+}
+
+/**
+a{
+ color:black;
+ text-decoration: none;
+}
+**
+.btn{
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+  padding:10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  @include gradient-vertical($secondary, $primary);
+  
+  &:hover{
+      @include gradient-vertical($secondary, $primary)
+  }
+  
+}
+.descript{
+  font-size: 25px;
+}
+.menu_descript{
+  height: 200px;
+  padding-top:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn_menu{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width:100%;
+  justify-content:center;
+  border: 1px solid darken($tertiary, 20);
+  height:50px;
+  background-color: lighten($tertiary, 20);
+  
+  .circle { 
+      height: 20px; 
+      width: 20px; 
+      background: lighten($primary, 5);
+      text-align: center;
+      border-radius: 50%; 
+      
+      
+  
+  }
+}
+
+**/
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px; }
+
+figcaption {
+  margin-top: 20px;
+  font-weight: bold;
+  color: black; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+@media screen and (min-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px; }
+  .menu__details {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column; }
+  .Plat__info {
+    flex-direction: column; } }
+
+@media screen and (min-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; }
+  .footer__info {
+    margin-left: auto; } }
+
+@media screen and (min-width: 1024px) {
+  .menu__item {
+    display: flex;
+    justify-content: space-evenly; }
+    .menu__item h4 {
+      width: 100%;
+      text-align: center; }
+    .menu__item .menu__details {
+      width: 33%;
+      justify-content: center; } }
+
+@media screen and (min-width: 900px) {
+  .menu__item {
+    display: flex;
+    justify-content: center; }
+  .menu__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+.title__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
+
+main {
+  background-color: #e5e5e5;
+  border-radius: 15px 15px 0px 0px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: -120px; }
+
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
+
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+.plat__info {
+  border: 1px solid gray;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+  height: 60px;
+  width: 22rem;
+  display: flex;
+  overflow: hidden;
+  -webkit-animation: fadein 5s forwards;
+  animation: fadein 5s forwards;
+  opacity: 0; }
+  .plat__info:nth-of-type(1) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s; }
+  .plat__info:nth-of-type(2) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; }
+  .plat__info:nth-of-type(3) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s; }
+  .plat__info:nth-of-type(4) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s; }
+  .plat__info:nth-of-type(5) {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s; }
+  .plat__info:nth-of-type(6) {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s; }
+  .plat__info:nth-of-type(7) {
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s; }
+  .plat__info:nth-of-type(8) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s; }
+  .plat__info:nth-of-type(9) {
+    -webkit-animation-delay: 4.5s;
+    animation-delay: 4.5s; }
+  .plat__info:nth-of-type(10) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s; }
+  .plat__info:nth-of-type(11) {
+    -webkit-animation-delay: 5.5s;
+    animation-delay: 5.5s; }
+  .plat__info:nth-of-type(12) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s; }
+  .plat__info:nth-of-type(13) {
+    -webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s; }
+  .plat__info:nth-of-type(14) {
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s; }
+  .plat__info:nth-of-type(15) {
+    -webkit-animation-delay: 7.5s;
+    animation-delay: 7.5s; }
+  .plat__info span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 3rem);
+    transition: width 1s; }
+  .plat__info .fa-check-circle {
+    font-size: 30px;
+    color: white;
+    align-self: center;
+    margin: auto; }
+  .plat__info h4,
+  .plat__info h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    width: 100%; }
+  .plat__info .price {
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 3rem;
+    display: flex;
+    justify-content: center; }
+  .plat__info .font {
+    width: 0;
+    overflow: hidden;
+    transition: width 1s; }
+  .plat__info:hover span {
+    width: calc(100% - 7rem); }
+  .plat__info:hover .font {
+    width: 4rem; }
+    .plat__info:hover .font .fa-check-circle {
+      -webkit-animation: wrench 700ms ease-in-out;
+      animation: wrench 700ms ease-in-out; }
+  .plat__info:hover .font {
+    width: 4rem;
+    background-color: #71d7be;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px; }
+
+@-webkit-keyframes wrench {
+  0% {
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(-15deg); }
+  30% {
+    transform: rotate(-25deg); }
+  50% {
+    transform: rotate(-45deg); }
+  60% {
+    transform: rotate(-60deg); }
+  65% {
+    transform: rotate(-80deg); }
+  75% {
+    transform: rotate(-90deg); }
+  85% {
+    transform: rotate(-100deg); }
+  100% {
+    transform: rotate(-110deg); } }
+
+@keyframes wrench {
+  0% {
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(-15deg); }
+  30% {
+    transform: rotate(-25deg); }
+  50% {
+    transform: rotate(-45deg); }
+  60% {
+    transform: rotate(-60deg); }
+  65% {
+    transform: rotate(-80deg); }
+  75% {
+    transform: rotate(-90deg); }
+  85% {
+    transform: rotate(-100deg); }
+  100% {
+    transform: rotate(-110deg); } }
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    margin-top: 30px;
+    opacity: 0; }
+  to {
+    margin-top: 10px;
+    opacity: 1; } }
+
+@keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    margin-top: 30px;
+    opacity: 0; }
+  to {
+    margin-top: 10px;
+    opacity: 1; } }
+
+@media screen and (min-width: 900px) {
+  .menu__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+.card__info {
+  display: flex; }
+
+footer {
+  background-color: black;
+  color: white;
+  margin-bottom: auto; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+ul {
+  list-style-type: none; }
+
+li {
+  display: flex;
+  align-items: baseline;
+  margin-top: auto; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; } }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+header {
+  background-color: #e8f9f5; }
+
+/**
+  header{
+    background-color: lighten($tertiary, 20);
+    height: 300px;
+    
+  }**/
+.logo {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px; }
+
+.place {
+  display: flex;
+  background-color: #71d7be;
+  justify-content: center;
+  padding: 10px; }
+
+.fas {
+  margin-right: 10px; }
+
+.accroche_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: space-between;
+  height: 175px; }
+
+/**
+  a{
+   color:black;
+   text-decoration: none;
+  }
+  **/
+.btn {
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: #d46bdb;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+  .btn:hover {
+    background-color: #d46bdb;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+
+.descript {
+  font-size: 25px; }
+
+.menu__descript {
+  height: 200px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+.btn__menu {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 300px;
+  justify-content: center;
+  border: 1px solid #4acbab;
+  height: 50px;
+  background-color: #e8f9f5; }
+  .btn__menu .circle {
+    height: 20px;
+    width: 20px;
+    background: #a16be0;
+    text-align: center;
+    border-radius: 50%; }
+
+.fas {
+  color: gray;
+  padding: 10px; }
+
+@media screen and (min-width: 900px) {
+  .menu__descript {
+    flex-direction: row;
+    justify-content: space-around; } }
+
+.title__logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline; }
+
+i.fa-arrow-left {
+  font-size: 30px;
+  margin-right: 100px; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 20px; }
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+
+header {
+  height: auto;
+  background-color: white; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */

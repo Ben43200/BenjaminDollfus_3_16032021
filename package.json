@@ -1,0 +1,24 @@
+{
+  "name": "benjamin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "makeCss": "node ./node_modules/gulp/bin/gulp.js makeCss",
+    "makePage": "node ./node_modules/gulp/bin/gulp.js makePage",
+    "watch": "node ./node_modules/gulp/bin/gulp.js watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-ejs": "^5.1.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {}
+}

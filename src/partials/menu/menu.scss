@@ -1,0 +1,169 @@
+$largeurCoche: 4rem;
+$largeurPrix: 3rem;
+$largeurSpan: #{$largeurCoche + $largeurPrix};
+
+@mixin animationLargeur {
+  transition: width 1s;
+}
+
+.plat__info {
+  border: 1px solid gray;
+  margin-top: 10px;
+
+  // @include shadow (darken($tertiary, 10));
+  background-color: white;
+  border-radius: 10px;
+  height: 60px;
+  width: 22rem;
+  display: flex;
+  overflow: hidden;
+  animation: fadein 5s forwards;
+  opacity: 0;
+
+  @for $i from 1 through 15 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $i * 0.5s;
+    }
+  }
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - #{$largeurPrix});
+    @include animationLargeur;
+  }
+
+  .fa-check-circle {
+    font-size: 30px;
+    color: white;
+    align-self: center;
+    margin: auto;
+  }
+
+  h4,
+  h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .price {
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: $largeurPrix;
+    display: flex;
+    justify-content: center;
+  }
+
+  .font {
+    width: 0;
+    overflow: hidden;
+    @include animationLargeur;
+  }
+
+  &:hover {
+    span {
+      width: calc(100% - #{$largeurSpan});
+    }
+
+    .font {
+      width: $largeurCoche;
+      .fa-check-circle {
+        animation: wrench 700ms ease-in-out;
+      }
+    }
+
+    .font {
+      width: 4rem;
+      // .fa-check-circle{
+      //           font-size: 30px;
+      //           color:white;
+      //}
+      background-color: (darken($tertiary, 10));
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+}
+
+@keyframes wrench {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    -webkit-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  60% {
+    -webkit-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
+  65% {
+    -webkit-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  85% {
+    -webkit-transform: rotate(-100deg);
+    -ms-transform: rotate(-100deg);
+    transform: rotate(-100deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-110deg);
+    -ms-transform: rotate(-110deg);
+    transform: rotate(-110deg);
+  }
+}
+
+@keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    margin-top: 30px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 10px;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .menu__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.card__info {
+  display: flex;
+}
