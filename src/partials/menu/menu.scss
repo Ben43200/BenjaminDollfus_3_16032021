@@ -41,8 +41,9 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
     margin: auto;
   }
 
-  h4,
-  h5 {
+  // h4,
+  // h5 {
+    p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -166,4 +167,13 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
 }
 .card__info {
   display: flex;
+}
+
+h4::after{
+  content: "";
+  display: flex;
+  justify-content: space-evenly;
+  background-color: green;
+  width:2rem;
+  height:4px;
 }
