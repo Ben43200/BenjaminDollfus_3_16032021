@@ -22,20 +22,22 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-left: 15px;
 }
 
 ul{
     list-style-type: none;
-    // display: flex;
-    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     // justify-content: space-between;
    
 }
 
 li{
     display: flex;
-  align-items: baseline;
-    margin-top: auto;
+  
+   
 }
 
 
@@ -58,3 +60,7 @@ li{
   
     }
   
+
+    .fas{
+       font-size: 10px;
+    }

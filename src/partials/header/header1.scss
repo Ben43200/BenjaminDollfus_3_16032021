@@ -24,7 +24,7 @@ header{
   }
   .place{
     display:flex;
-    background-color: darken($tertiary, 10);
+    background-color: #eaeaea;
     justify-content: center;
     padding:10px;
   }
@@ -79,14 +79,15 @@ header{
     border-radius: 20px;
     width:300px;
     justify-content:center;
-    border: 1px solid darken($tertiary, 20);
+    box-shadow: 2px 2px 2px  #e4e4e4;
+    border: 1px solid #e4e4e4;
     height:50px;
-    background-color: lighten($tertiary, 20);
+    background-color: #f5edff;
     
     .circle { 
         height: 20px; 
         width: 20px; 
-        background: lighten($primary, 5);
+        background: #9356dc;
         text-align: center;
         border-radius: 50%; 
         
@@ -96,7 +97,7 @@ header{
   }
 .fas{
   color:gray;
-  padding:10px;
+  // padding:10px;
 }
   // .fas:hover{
   //   color:lighten($primary, 5)
