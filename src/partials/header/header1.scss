@@ -5,7 +5,9 @@
 header{
     background-color: lighten($tertiary, 20);
     
-    
+    p{
+      text-align: center;
+    }
   }
   /**
   header{
@@ -13,7 +15,7 @@ header{
     height: 300px;
     
   }**/
-  
+ 
   
   .logo{
     display: flex;
@@ -76,6 +78,7 @@ header{
   .btn__menu{
     display: flex;
     align-items: center;
+    position:relative;
     border-radius: 20px;
     width:300px;
     justify-content:center;
@@ -87,6 +90,8 @@ header{
     .circle { 
         height: 20px; 
         width: 20px; 
+        position: absolute;
+        right:287px;
         background: #9356dc;
         text-align: center;
         border-radius: 50%; 
