@@ -79,6 +79,8 @@ header{
     display: flex;
     align-items: center;
     position:relative;
+    text-align: center;
+    font-weight: bold;
     border-radius: 20px;
     width:300px;
     justify-content:center;
@@ -102,6 +104,10 @@ header{
     .fas{
       color:gray;
       font-size: 15px;
+      padding-right: 20px;
+      &:hover{
+        color: #9356dc;
+      }
       // padding:10px;
     }
   }

@@ -469,21 +469,6 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 200px;
-  width: 100%; }
-
-section h2 {
-  font-size: 30px; }
-
-.card {
-  height: 250px;
-  background-color: white;
-  margin-top: 30px;
-  border-radius: 20px 20px 0px 0px; }
-
 /**
  *
  * This mixin will permit to display a colored background image following the 
@@ -564,6 +549,8 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+  text-align: center;
+  font-weight: bold;
   border-radius: 20px;
   width: 300px;
   justify-content: center;
@@ -581,7 +568,10 @@ header {
     border-radius: 50%; }
   .btn__menu .fas {
     color: gray;
-    font-size: 15px; }
+    font-size: 15px;
+    padding-right: 20px; }
+    .btn__menu .fas:hover {
+      color: #9356dc; }
 
 @media screen and (min-width: 900px) {
   .menu__descript {
@@ -590,7 +580,8 @@ header {
 
 .title__logo {
   display: flex;
-  align-items: baseline; }
+  align-items: baseline;
+  height: 20px; }
 
 .logo {
   text-align: center; }
@@ -613,6 +604,21 @@ img {
 header {
   height: auto;
   background-color: white; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 200px;
+  width: 100%; }
+
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 250px;
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 20px 20px 0px 0px; }
 
 /**
  *
