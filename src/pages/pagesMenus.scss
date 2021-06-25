@@ -32,12 +32,16 @@ h3{
     }
     .menu__details {
       display: flex;
-      // flex-direction: row;
+      
       justify-content: space-between;
     }
   }
 
-
+  @media screen and (min-width: 900px){
+     .grid__container{
+       grid-template-columns: 1fr 1fr;
+     }
+  }
 
 
 

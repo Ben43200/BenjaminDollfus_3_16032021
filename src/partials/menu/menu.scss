@@ -27,8 +27,8 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
       animation-delay: $i * 0.5s;
     }
   }
-
-  span {
+  // span
+  .plat__info__titre {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
