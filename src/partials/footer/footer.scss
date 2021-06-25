@@ -34,11 +34,11 @@ ul{
    
 }
 
-li{
-    display: flex;
+// li{
+//     display: flex;
   
    
-}
+// }
 
 
 @media screen and  (min-width: 900px) {
@@ -57,13 +57,13 @@ li{
         
        margin-top: 50px;
     }
+
+    li{
+        display: flex;
+        
+    }
+    
 }
-    // li{
-      
-    //     justify-content: space-between;
-    // }
-    // }
- 
 
     .fas{
        font-size: 10px;
