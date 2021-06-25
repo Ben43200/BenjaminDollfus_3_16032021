@@ -164,6 +164,10 @@ figcaption {
   .footer__info {
     margin-left: auto; } }
 
+h3 {
+  font-size: 20px;
+  font-weight: bold; }
+
 @media screen and (min-width: 1024px) {
   .menu__item {
     display: flex;
@@ -194,7 +198,7 @@ main {
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
-  margin-top: -110px; }
+  margin-top: -90px; }
 
 .btn__command {
   display: flex;
@@ -215,136 +219,71 @@ main {
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
 
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
-header {
-  background-color: #e8f9f5; }
-  header p {
-    text-align: center; }
-
-/**
-  header{
-    background-color: lighten($tertiary, 20);
-    height: 300px;
-    
-  }**/
-.logo {
-  display: flex;
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
   justify-content: center;
-  color: black;
-  font-family: 'Shrikhand', cursive;
-  font-size: 30px; }
-
-.place {
-  display: flex;
-  background-color: #eaeaea;
-  justify-content: center;
-  padding: 10px; }
-
-.fas {
-  margin-right: 10px; }
-
-.accroche_title {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  justify-content: space-between;
-  height: 175px; }
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
 
-/**
-  a{
-   color:black;
-   text-decoration: none;
-  }
-  **/
-.btn {
-  display: flex;
-  align-content: flex-end;
-  font-size: 17px;
-  padding: 10px;
-  margin-top: 20px;
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+footer {
+  background-color: black;
   color: white;
-  border-radius: 20px;
-  background-color: #d46bdb;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
-  .btn:hover {
-    background-color: #d46bdb;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+  margin-bottom: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
 
-.descript {
-  font-size: 25px; }
-
-.menu__descript {
-  height: 200px;
-  padding-top: 20px;
+.footer__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: flex-start;
+  margin-left: 15px; }
 
-.btn__menu {
+ul {
+  list-style-type: none;
   display: flex;
-  align-items: center;
-  position: relative;
-  border-radius: 20px;
-  width: 300px;
-  justify-content: center;
-  box-shadow: 2px 2px 2px  #e4e4e4;
-  border: 1px solid #e4e4e4;
-  height: 50px;
-  background-color: #f5edff; }
-  .btn__menu .circle {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 287px;
-    background: #9356dc;
-    text-align: center;
-    border-radius: 50%; }
-  .btn__menu .fas {
-    color: gray;
-    font-size: 15px; }
+  flex-direction: column;
+  align-content: center; }
+
+li {
+  display: flex; }
 
 @media screen and (min-width: 900px) {
-  .menu__descript {
-    flex-direction: row;
-    justify-content: space-around; } }
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; } }
 
-.title__logo {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline; }
-
-.logo {
-  text-align: center; }
-
-i.fa-arrow-left {
-  font-size: 20px; }
-
-img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 300px;
-  width: 100%; }
-
-.card__info {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  border-radius: 0px; }
-
-header {
-  height: auto;
-  background-color: white; }
+.fas {
+  font-size: 10px; }
 
 .plat__info {
   margin-top: 10px;
@@ -510,6 +449,7 @@ header {
 @media screen and (min-width: 900px) {
   .menu__details {
     display: flex;
+    flex-direction: row;
     justify-content: space-between; } }
 
 .card__info {
@@ -529,72 +469,6 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-i.fa-heart {
-  font-size: 20px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2.5rem;
-  color: black; }
-  i.fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-position-y: 4rem;
-    -webkit-animation: position 2s forwards;
-    animation: position 2s forwards; }
-
-@-webkit-keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-@keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-footer {
-  background-color: black;
-  color: white;
-  margin-bottom: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-li {
-  display: flex; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    flex-direction: column;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px; } }
-
-.fas {
-  font-size: 10px; }
-
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -609,6 +483,136 @@ section h2 {
   background-color: white;
   margin-top: 30px;
   border-radius: 20px 20px 0px 0px; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+header {
+  background-color: #e8f9f5; }
+  header p {
+    text-align: center; }
+
+/**
+  header{
+    background-color: lighten($tertiary, 20);
+    height: 300px;
+    
+  }**/
+.logo {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px; }
+
+.place {
+  display: flex;
+  background-color: #eaeaea;
+  justify-content: center;
+  padding: 10px; }
+
+.fas {
+  margin-right: 10px; }
+
+.accroche_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: space-between;
+  height: 175px; }
+
+/**
+  a{
+   color:black;
+   text-decoration: none;
+  }
+  **/
+.btn {
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: #d46bdb;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+  .btn:hover {
+    background-color: #d46bdb;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+
+.descript {
+  font-size: 25px; }
+
+.menu__descript {
+  height: 200px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+.btn__menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  width: 300px;
+  justify-content: center;
+  box-shadow: 2px 2px 2px  #e4e4e4;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  background-color: #f5edff; }
+  .btn__menu .circle {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 287px;
+    background: #9356dc;
+    text-align: center;
+    border-radius: 50%; }
+  .btn__menu .fas {
+    color: gray;
+    font-size: 15px; }
+
+@media screen and (min-width: 900px) {
+  .menu__descript {
+    flex-direction: row;
+    justify-content: space-around; } }
+
+.title__logo {
+  display: flex;
+  align-items: baseline; }
+
+.logo {
+  text-align: center; }
+
+i.fa-arrow-left {
+  font-size: 20px;
+  padding-right: 80px; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 300px;
+  width: 100%; }
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+
+header {
+  height: auto;
+  background-color: white; }
 
 /**
  *

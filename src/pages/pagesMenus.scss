@@ -1,7 +1,10 @@
 
 // 1024
 
-
+h3{
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .menu__item {
     @media screen AND (min-width:1024px) {
@@ -50,7 +53,7 @@ main {
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
-  margin-top: -110px;
+  margin-top: -90px;
 }
 
 .btn__command{
