@@ -256,6 +256,42 @@ i.fa-heart {
   to {
     background-position-y: 2.75rem; } }
 
+footer {
+  background-color: black;
+  color: white;
+  margin-bottom: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    flex-direction: row;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px; }
+  li {
+    display: flex; } }
+
+.fas {
+  font-size: 10px; }
+
 /**
  *
  * This mixin will permit to display a colored background image following the 
@@ -444,42 +480,6 @@ header {
   100% {
     opacity: 0; } }
 
-footer {
-  background-color: black;
-  color: white;
-  margin-bottom: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    flex-direction: row;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px; }
-  li {
-    display: flex; } }
-
-.fas {
-  font-size: 10px; }
-
 .plat__info {
   margin-top: 10px;
   background-color: #ffffff;
@@ -663,6 +663,12 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -677,10 +683,3 @@ section h2 {
   background-color: white;
   margin-top: 30px;
   border-radius: 20px; }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
