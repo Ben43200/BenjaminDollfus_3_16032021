@@ -9,18 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-  <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous' />
+
   <title>Ohmyfood</title>
 </head>
 </head>
 <body>
   
+  <%- include('../partials/header/loading.html'); %>
   <h1 class="logo">Ohmyfood</h1>
   
   <%- include('../partials/header/header1.html'); %>
   
 
-  <%- include('../partials/header/loading.html'); %>
   <section class="grid__container">
    <a href="la-palette-du-gout.html">
   <%- include('../partials/restaurant/restaurant.html',{
