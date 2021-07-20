@@ -21,6 +21,12 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
   overflow: hidden;
   animation: fadein 5s forwards;
   opacity: 0;
+  margin:auto;
+
+
+
+
+
 
   @for $i from 1 through 15 {
     &:nth-of-type(#{$i}) {

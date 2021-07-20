@@ -14,16 +14,43 @@ section{
   h2{
       font-size:30px;
   }
+  hgroup{
+    margin-left:1rem;
+  }
+  .far{
+     margin-left:1rem;
+  }
 }
 
-.card{
-height:250px;
-background-color: white;
-margin-top:30px;
-border-radius: 20px;}
+// .card{
+// height:250px;
+// background-color: white;
+// margin-top:30px;
+// border-radius: 20px;}
 
+// .card{
+  
+//   height:300px;
+//   background-color: white;
+//   border-radius: 40px;
+//   box-shadow: 2px 2px 2px  #e4e4e4;
 
-
+//   .card__nouveau::after{
+//     content:"nouveau";
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+//     padding:0.45rem;
+//     color:#008766;
+//     background-color: #99e2d0;
+//     width: 4rem;
+//     height: 2rem;
+//     margin-top:-35%;
+//     margin-left:75%;
+//     position: relative;
+  
+//   }
+// }
 // .menu__details{
 //   display:flex;
 //   justify-content: space-around;
