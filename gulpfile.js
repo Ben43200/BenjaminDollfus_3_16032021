@@ -34,7 +34,7 @@ function watch() {
 
   gulp.watch("./src/**/*.scss", makeCss);
   gulp.watch("./src/**/*.html", makePage);
-  gulp.watch("www/").on('change', browserSync.reload);
+  gulp.watch("./www/").on('change', browserSync.reload);
 }
 module.exports.makeCss    = makeCss;
 module.exports.makePage   = makePage;
