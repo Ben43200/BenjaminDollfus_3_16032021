@@ -32,31 +32,33 @@ section{
     content:"nouveau";
     display: flex;
     justify-content: center;
-    align-content: center;
+    // align-content: center;
+    grid-area: figure ;
+    
     padding:0.45rem;
     color:#008766;
     background-color: #99e2d0;
     width: 4rem;
     height: 2rem;
-    margin-top:-35%;
-    margin-left:75%;
-    position: relative;
-
-  }
-
-  .card__nouveau-2::after{
-    content:"nouveau";
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding:0.45rem;
-    color:#008766;
-    background-color: #99e2d0;
-    width: 4rem;
-    height: 2rem;
-    margin-top:-35%;
-    margin-left:75%;
-    position: relative;
+    margin-top: 50px;
+    margin-left:80%;
+    // // position: relative;
   
   }
+
+  // .card__nouveau-2::after{
+  //   content:"nouveau";
+  //   display: flex;
+  //   justify-content: center;
+  //   align-content: center;
+  //   padding:0.45rem;
+  //   color:#008766;
+  //   background-color: #99e2d0;
+  //   width: 4rem;
+  //   height: 2rem;
+  //   // margin-top:-35%;
+  //   // margin-left:75%;
+  //   // position: relative;
+  
+  // }
 
