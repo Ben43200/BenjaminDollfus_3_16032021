@@ -123,20 +123,23 @@ header {
 //   color:lighten($primary, 5)
 // }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .menu__descript {
     flex-direction: row;
     justify-content: space-around;
-  }
+    margin-bottom:40px;
   // .btn__menu{
   //   justify-content: space-around;
   // }
 }
-
+}
 @media screen and (min-width: 1400px) {
   .menu__descript {
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom:40px;
+    // display:grid;
+    // min-height: 50vh;
   }
   // .btn__menu{
   //   justify-content: space-around;
@@ -146,3 +149,4 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+

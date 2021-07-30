@@ -17,6 +17,7 @@ body{
   padding:10px;
   min-height: 100vh;
   display: grid;
+  // grid-template-columns: auto;
   
 }
 
@@ -100,8 +101,10 @@ figcaption{
 
 
 @media screen and  (min-width: 600px) {
-
-  .grid__container{
+.menu__descript{
+  margin-bottom:40px;
+}
+    .grid__container{
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: 20rem;
@@ -131,6 +134,11 @@ margin-left: auto;
 
 }
 
-
-
-
+@media (min-width: 300px) and (max-width: 600px) { 
+  .grid__container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20rem;
+    gap:40px;
+  }
+}
