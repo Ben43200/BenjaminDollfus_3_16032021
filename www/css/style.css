@@ -43,7 +43,6 @@ body {
   margin: auto;
   font-family: 'roboto', sans-serif;
   background-color: #f6f6f6;
-  max-height: auto;
   padding: 10px;
   min-height: 100vh;
   display: grid; }
@@ -151,6 +150,255 @@ main {
     background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+  @media screen and (min-width: 1024px) {
+    footer {
+      margin-top: 1rem; } }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px; }
+  li {
+    display: flex;
+    align-items: center; } }
+
+.fas {
+  font-size: 10px; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+header {
+  background-color: #e8f9f5; }
+  header p {
+    text-align: center; }
+
+/**
+  header{
+    background-color: lighten($tertiary, 20);
+    height: 300px;
+    
+  }**/
+.logo {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px; }
+
+.place {
+  display: flex;
+  background-color: #eaeaea;
+  justify-content: center;
+  padding: 10px;
+  align-content: baseline; }
+  .place .fas {
+    font-size: 15px; }
+
+.fas {
+  margin-right: 10px; }
+
+.accroche_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: space-between;
+  height: 175px; }
+
+/**
+  a{
+   color:black;
+   text-decoration: none;
+  }
+  **/
+.btn {
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: #d46bdb;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+  .btn:hover {
+    background-color: #d46bdb;
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+
+.descript {
+  font-size: 25px;
+  text-align: center; }
+
+.menu__descript {
+  height: 200px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+.btn__menu {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 2px 2px 2px #e4e4e4;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  background-color: #f6f6f6; }
+  .btn__menu:hover {
+    background-color: #f5edff; }
+  .btn__menu .circle {
+    height: 23px;
+    width: 23px;
+    background: #9356dc;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    margin-left: -0.6rem;
+    padding: 0.15rem; }
+  .btn__menu .fas {
+    color: gray;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    width: 4rem; }
+    .btn__menu .fas:hover {
+      color: #9356dc; }
+
+@media screen and (min-width: 1000px) {
+  .menu__descript {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 40px; } }
+
+@media screen and (min-width: 1400px) {
+  .menu__descript {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 40px; }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; } }
+
+.title__logo {
+  display: flex;
+  align-items: baseline; }
+
+.logo {
+  text-align: center; }
+
+i.fa-arrow-left {
+  font-size: 20px;
+  padding-right: 80px; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 300px;
+  width: 100%; }
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+
+header {
+  height: auto;
+  background-color: white; }
+
+.loader__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: disparition 3s forwards;
+  animation: disparition 3s forwards;
+  overflow: hidden; }
+
+.loader__circle {
+  border: 16px solid transparent;
+  /* Light grey */
+  border-top: 16px solid #99E2D0;
+  /* Blue */
+  border-bottom: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-left: 16px solid #7e7e7e;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes disparition {
+  0% {
+    height: 100%; }
+  99% {
+    height: 100%; }
+  100% {
+    height: 0; } }
+
+@keyframes disparition {
+  0% {
+    height: 100%; }
+  99% {
+    height: 100%; }
+  100% {
+    height: 0; } }
 
 i.fa-heart {
   grid-area: coeur;
@@ -366,261 +614,6 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-footer {
-  background-color: black;
-  color: white;
-  margin-top: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-  @media screen and (min-width: 1024px) {
-    footer {
-      margin-top: 1rem; } }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px; }
-  li {
-    display: flex;
-    align-items: center; } }
-
-.fas {
-  font-size: 10px; }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
-header {
-  background-color: #e8f9f5; }
-  header p {
-    text-align: center; }
-
-/**
-  header{
-    background-color: lighten($tertiary, 20);
-    height: 300px;
-    
-  }**/
-.logo {
-  display: flex;
-  justify-content: center;
-  color: black;
-  font-family: "Shrikhand", cursive;
-  font-size: 30px; }
-
-.place {
-  display: flex;
-  background-color: #eaeaea;
-  justify-content: center;
-  padding: 10px;
-  align-content: baseline; }
-  .place .fas {
-    font-size: 15px; }
-
-.fas {
-  margin-right: 10px; }
-
-.accroche_title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-  justify-content: space-between;
-  height: 175px; }
-
-/**
-  a{
-   color:black;
-   text-decoration: none;
-  }
-  **/
-.btn {
-  display: flex;
-  align-content: flex-end;
-  font-size: 17px;
-  padding: 10px;
-  margin-top: 20px;
-  color: white;
-  border-radius: 20px;
-  background-color: #d46bdb;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
-  .btn:hover {
-    background-color: #d46bdb;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
-
-.descript {
-  font-size: 25px;
-  text-align: center; }
-
-.menu__descript {
-  height: 200px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.btn__menu {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  border-radius: 20px;
-  width: 300px;
-  box-shadow: 2px 2px 2px #e4e4e4;
-  border: 1px solid #e4e4e4;
-  height: 50px;
-  background-color: #f6f6f6; }
-  .btn__menu:hover {
-    background-color: #f5edff; }
-  .btn__menu .circle {
-    height: 23px;
-    width: 23px;
-    background: #9356dc;
-    text-align: center;
-    color: white;
-    border-radius: 50%;
-    margin-left: -0.6rem;
-    padding: 0.15rem; }
-  .btn__menu .fas {
-    color: gray;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    width: 4rem; }
-    .btn__menu .fas:hover {
-      color: #9356dc; }
-
-@media screen and (min-width: 1000px) {
-  .menu__descript {
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 40px; } }
-
-@media screen and (min-width: 1400px) {
-  .menu__descript {
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 40px; }
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; } }
-
-.title__logo {
-  display: flex;
-  align-items: baseline; }
-
-.logo {
-  text-align: center; }
-
-i.fa-arrow-left {
-  font-size: 20px;
-  padding-right: 80px; }
-
-img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 300px;
-  width: 100%; }
-
-.card__info {
-  display: flex;
-  justify-content: space-between;
-  position: relative; }
-
-header {
-  height: auto;
-  background-color: white; }
-
-.loader__container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: disparition 3s forwards;
-  animation: disparition 3s forwards;
-  overflow: hidden; }
-
-.loader__circle {
-  border: 16px solid transparent;
-  /* Light grey */
-  border-top: 16px solid #99E2D0;
-  /* Blue */
-  border-bottom: 16px solid #9356DC;
-  border-right: 16px solid #FF79DA;
-  border-left: 16px solid #7e7e7e;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@-webkit-keyframes disparition {
-  0% {
-    height: 100%; }
-  99% {
-    height: 100%; }
-  100% {
-    height: 0; } }
-
-@keyframes disparition {
-  0% {
-    height: 100%; }
-  99% {
-    height: 100%; }
-  100% {
-    height: 0; } }
-
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -631,7 +624,12 @@ section figure {
   grid-area: figure; }
 
 section h2 {
-  font-size: 30px; }
+  font-size: 20px;
+  font-weight: bold; }
+
+section h3 {
+  font-size: 16px;
+  font-weight: 200; }
 
 section hgroup {
   margin-left: 1rem;
@@ -652,3 +650,10 @@ article.nouveau::after {
   height: 2rem;
   margin-top: 50px;
   margin-left: 80%; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
