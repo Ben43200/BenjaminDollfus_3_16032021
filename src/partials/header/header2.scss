@@ -1,40 +1,32 @@
-.title__logo{
-  display:flex;
-// justify-content: center;
-  align-items: baseline;
-  
-
-}
-.logo{
-  text-align: center;
-}
-
-i.fa-arrow-left{
-  font-size:20px;
-  padding-right:80px;
-  
-
- 
-}
-img{
-    object-fit: cover;
-    height: 300px;
-    width: 100%;
-    
-    
-    
-   
-    
-  }
-  .card__info{
+.title__logo {
+  display: grid;
+  grid-template-areas: "fleche logo .";
+  grid-template-columns: 1fr auto 1fr;
+  a {
+    grid-area: fleche;
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    // border-radius: 0px;
-         
-    }
+    justify-content: center;
+    align-items: center;
+  }
+}
 
-    header{
-        height:auto;
-        background-color: white;
-    }
+i.fa-arrow-left {
+  font-size: 20px;
+}
+img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  // border-radius: 0px;
+}
+
+header {
+  height: auto;
+  background-color: white;
+  width: 100%;
+}

@@ -103,6 +103,10 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
   }
 }
 
+figure {
+  width: 100vw;
+}
+
 @keyframes wrench {
   0% {
     -webkit-transform: rotate(0deg);
