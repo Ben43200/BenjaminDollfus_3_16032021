@@ -66,9 +66,20 @@ ul{
         display: flex;
         align-items: center;
     }
-
+  // @media screen and (min-width: 900px){
+  //    .grid__container{
+  //      grid-template-columns: 1fr 1fr;
+  //    }
+  // }
 }
 
     .fas{
        font-size: 10px;
     }
+
+//   @media screen and (min-width: 900px){
+//      .grid__container{
+//        grid-template-columns: 1fr 1fr;
+//      }
+  
+//   }

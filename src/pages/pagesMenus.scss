@@ -25,11 +25,15 @@ h3{
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .menu__item{
-        display: flex;
+        // display: flex;
         justify-content: center;
-        align-items: flex-start;
+        // align-items: flex-start;
+
+
+
+        // flex-direction: column;
     }
     .menu__details {
       display: flex;
@@ -38,11 +42,11 @@ h3{
     }
   }
 
-  @media screen and (min-width: 900px){
-     .grid__container{
-       grid-template-columns: 1fr 1fr;
-     }
-  }
+  // @media screen and (min-width: 900px){
+  //    .grid__container{
+  //      grid-template-columns:  1fr;
+  //    }
+  // }
 
 
 
@@ -80,3 +84,15 @@ main {
 }
 
 
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+  .menu__details{
+    flex-direction: column;
+}
+}

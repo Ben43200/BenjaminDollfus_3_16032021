@@ -45,7 +45,8 @@ body {
   background-color: #f6f6f6;
   padding: 0px;
   min-height: 100vh;
-  display: grid; }
+  display: grid;
+  min-width: 100vw; }
 
 a {
   color: black;
@@ -81,6 +82,11 @@ figcaption {
   .menu__details {
     align-content: center;
     flex-direction: column; }
+  .grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20rem;
+    gap: 40px; }
   .footer__info {
     margin-left: auto; } }
 
@@ -90,6 +96,30 @@ figcaption {
     grid-template-columns: 1fr;
     grid-template-rows: 20rem;
     gap: 40px; } }
+
+@media screen and (min-width: 1000px) {
+  .menu__details {
+    flex-direction: column; } }
+
+@media screen and (min-width: 1000px) {
+  .menu__descript {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 40px; } }
+
+@media screen and (min-width: 1400px) {
+  .menu__descript {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 40px; }
+  .grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20rem;
+    gap: 40px; }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 h3 {
   font-size: 20px;
@@ -106,18 +136,12 @@ h3 {
       width: 33%;
       justify-content: center; } }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .menu__item {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; }
+    justify-content: center; }
   .menu__details {
     display: flex;
     justify-content: space-between; } }
-
-@media screen and (min-width: 900px) {
-  .grid__container {
-    grid-template-columns: 1fr 1fr; } }
 
 .title__item {
   display: flex;
@@ -151,75 +175,9 @@ main {
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
 
-i.fa-heart {
-  grid-area: coeur;
-  font-size: 20px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2.5rem;
-  color: black; }
-  i.fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-position-y: 4rem;
-    -webkit-animation: position 2s forwards;
-    animation: position 2s forwards; }
-
-@-webkit-keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-@keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-footer {
-  background-color: black;
-  color: white;
-  margin-top: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-  @media screen and (min-width: 1024px) {
-    footer {
-      margin-top: 1rem; } }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px; }
-  li {
-    display: flex;
-    align-items: center; } }
-
-.fas {
-  font-size: 10px; }
+@media screen and (min-width: 1000px) {
+  .menu__details {
+    flex-direction: column; } }
 
 /**
  *
@@ -331,21 +289,6 @@ header {
     .btn__menu .fas:hover {
       color: #9356dc; }
 
-@media screen and (min-width: 1000px) {
-  .menu__descript {
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 40px; } }
-
-@media screen and (min-width: 1400px) {
-  .menu__descript {
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 40px; }
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; } }
-
 .title__logo {
   display: grid;
   grid-template-areas: "fleche logo .";
@@ -372,8 +315,7 @@ img {
 
 header {
   height: auto;
-  background-color: white;
-  width: 100%; }
+  background-color: white; }
 
 .loader__container {
   position: fixed;
@@ -432,6 +374,35 @@ header {
     height: 100%; }
   100% {
     height: 0; } }
+
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
+
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
 
 .plat__info {
   margin-top: 10px;
@@ -620,6 +591,52 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+  @media screen and (min-width: 1024px) {
+    footer {
+      margin-top: 1rem; } }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px; }
+  li {
+    display: flex;
+    align-items: center; } }
+
+.fas {
+  font-size: 10px; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -656,10 +673,3 @@ article.nouveau::after {
   height: 2rem;
   margin-top: 50px;
   margin-left: 80%; }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
