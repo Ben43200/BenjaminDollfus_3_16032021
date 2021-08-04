@@ -179,46 +179,6 @@ main {
   .menu__details {
     flex-direction: column; } }
 
-footer {
-  background-color: black;
-  color: white;
-  margin-top: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-  @media screen and (min-width: 1024px) {
-    footer {
-      margin-top: 1rem; } }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px; }
-  li {
-    display: flex;
-    align-items: center; } }
-
-.fas {
-  font-size: 10px; }
-
 i.fa-heart {
   font-size: 20px;
   display: flex !important;
@@ -520,6 +480,8 @@ header {
     text-overflow: ellipsis;
     font-size: 0.9rem;
     width: 100%; }
+  .plat__info p:first-child {
+    font-weight: bold; }
   .plat__info .price {
     margin-left: auto;
     font-size: 1.1rem;
@@ -631,12 +593,46 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+  @media screen and (min-width: 1024px) {
+    footer {
+      margin-top: 1rem; } }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px; }
+  li {
+    display: flex;
+    align-items: center; } }
+
+.fas {
+  font-size: 10px; }
+
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -673,3 +669,10 @@ article.nouveau::after {
   height: 2rem;
   margin-top: 50px;
   margin-left: 80%; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */

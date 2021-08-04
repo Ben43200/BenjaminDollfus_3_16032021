@@ -58,6 +58,9 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
     font-size: 0.9rem;
     width: 100%;
   }
+  p:first-child{
+    font-weight: bold;
+  }
 
   .price {
     // margin-top: auto;
