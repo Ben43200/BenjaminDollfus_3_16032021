@@ -43,14 +43,18 @@ body {
   margin: auto;
   font-family: 'roboto', sans-serif;
   background-color: #f6f6f6;
-  padding: 0px;
+  padding: 5px;
   min-height: 100vh;
-  display: grid;
-  min-width: 100vw; }
+  display: grid; }
 
 a {
   color: black;
   text-decoration: none; }
+
+.restaurant {
+  font-weight: bold;
+  font-size: 1.5rem;
+  grid-column: 1/-1; }
 
 .card {
   height: 300px;
@@ -72,7 +76,7 @@ figcaption {
   .grid__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20rem;
+    grid-auto-columns: minmax(700px, 2fr);
     gap: 40px; }
   .menu__details {
     align-content: flex-start;
@@ -84,8 +88,7 @@ figcaption {
     flex-direction: column; }
   .grid__container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20rem;
+    grid-template-columns: 1fr 1fr;
     gap: 40px; }
   .footer__info {
     margin-left: auto; } }
@@ -94,7 +97,6 @@ figcaption {
   .grid__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20rem;
     gap: 40px; } }
 
 @media screen and (min-width: 1000px) {
@@ -107,16 +109,16 @@ figcaption {
     justify-content: space-around;
     margin-bottom: 40px; } }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1000px) {
   .menu__descript {
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 40px; }
   .grid__container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20rem;
-    gap: 40px; }
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 90px 0px 90px 0px; }
   .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; } }
@@ -164,8 +166,8 @@ main {
   padding: 10px;
   margin: auto;
   color: white;
+  border-color: #f6f6f6;
   border-radius: 20px;
-  -webkit-appearance: none;
   background-color: #d46bdb;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-repeat: repeat-x;
@@ -215,6 +217,35 @@ ul {
 
 .fas {
   font-size: 10px; }
+
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
+
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
 
 /**
  *
@@ -355,6 +386,8 @@ img {
 header {
   height: auto;
   background-color: white; }
+  header figure {
+    width: 100vw; }
 
 .loader__container {
   position: fixed;
@@ -522,9 +555,6 @@ header {
     align-items: center;
     border-radius: 0px 10px 10px 0px; }
 
-figure {
-  width: 100vw; }
-
 @-webkit-keyframes wrench {
   0% {
     transform: rotate(0deg); }
@@ -605,35 +635,6 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-i.fa-heart {
-  font-size: 20px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2.5rem;
-  color: black; }
-  i.fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-position-y: 4rem;
-    -webkit-animation: position 2s forwards;
-    animation: position 2s forwards; }
-
-@-webkit-keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-@keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -646,9 +647,6 @@ section figure {
 section h2 {
   font-size: 20px;
   font-weight: bold; }
-
-section h2::before {
-  content: "\0000C0"; }
 
 section h3 {
   font-size: 16px;

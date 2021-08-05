@@ -74,8 +74,9 @@ main {
   padding:10px;
   margin:auto;
   color: white;
+  border-color:#f6f6f6;
   border-radius: 20px;
-  -webkit-appearance: none;
+  
   @include gradient-vertical($secondary, $primary);
   
   &:hover{
