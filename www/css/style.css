@@ -165,48 +165,56 @@ main {
   margin: auto;
   color: white;
   border-radius: 20px;
+  -webkit-appearance: none;
   background-color: #d46bdb;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
   .btn__command:hover {
-    background-color: #d46bdb;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-color: #be64db;
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9356DC', endColorstr='#FFFF79DA', GradientType=0); }
 
-@media screen and (min-width: 1000px) {
-  .menu__details {
-    flex-direction: column; } }
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+  @media screen and (min-width: 1024px) {
+    footer {
+      margin-top: 1rem; } }
 
-i.fa-heart {
-  font-size: 20px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2.5rem;
-  color: black; }
-  i.fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-position-y: 4rem;
-    -webkit-animation: position 2s forwards;
-    animation: position 2s forwards; }
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
 
-@-webkit-keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
 
-@keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px; }
+  li {
+    display: flex;
+    align-items: center; } }
+
+.fas {
+  font-size: 10px; }
 
 /**
  *
@@ -266,15 +274,17 @@ header {
   margin-top: 20px;
   color: white;
   border-radius: 20px;
+  border-color: #f6f6f6;
+  -webkit-appearance: none;
   background-color: #d46bdb;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
   .btn:hover {
-    background-color: #d46bdb;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-color: #be64db;
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9356DC', endColorstr='#FFFF79DA', GradientType=0); }
 
 .descript {
   font-size: 25px;
@@ -479,12 +489,14 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.9rem;
-    width: 100%; }
+    width: 100%;
+    padding-left: 0.4rem; }
   .plat__info p:first-child {
-    font-weight: bold; }
+    font-weight: bold;
+    padding-top: 0.2rem; }
   .plat__info .price {
     margin-left: auto;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     width: 3rem;
     display: flex;
@@ -593,45 +605,34 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-footer {
-  background-color: black;
-  color: white;
-  margin-top: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-  @media screen and (min-width: 1024px) {
-    footer {
-      margin-top: 1rem; } }
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
 
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
 
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px; }
-  li {
-    display: flex;
-    align-items: center; } }
-
-.fas {
-  font-size: 10px; }
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
 
 img {
   -o-object-fit: cover;
@@ -645,6 +646,9 @@ section figure {
 section h2 {
   font-size: 20px;
   font-weight: bold; }
+
+section h2::before {
+  content: "\0000C0"; }
 
 section h3 {
   font-size: 16px;

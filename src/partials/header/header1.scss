@@ -73,10 +73,12 @@ header {
   margin-top: 20px;
   color: white;
   border-radius: 20px;
+  border-color:#f6f6f6;
+  -webkit-appearance: none;
   @include gradient-vertical($secondary, $primary);
 
   &:hover {
-    @include gradient-vertical($secondary, $primary);
+    @include gradient-vertical($primary,$secondary,);
   }
 }
 .descript {

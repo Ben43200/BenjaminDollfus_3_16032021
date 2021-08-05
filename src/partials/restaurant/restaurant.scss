@@ -18,6 +18,15 @@ section{
       font-size:20px;
       font-weight: bold;
   }
+
+
+
+  h2::before{
+
+
+  content : "\0000C0";
+}
+
   h3{
     font-size: 16px;
     font-weight:200;
@@ -25,6 +34,7 @@ section{
   hgroup{
     margin-left:1rem;
     grid-area: hgroup;
+
   }
   .far{
     //  margin-left:1rem;

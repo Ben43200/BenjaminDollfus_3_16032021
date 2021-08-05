@@ -57,20 +57,29 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
     text-overflow: ellipsis;
     font-size: 0.9rem;
     width: 100%;
+    // padding-top:0.5rem;
+    padding-left:0.4rem;
+
+
+  
   }
   p:first-child{
     font-weight: bold;
+    padding-top:0.2rem;
+    // padding-bottom:0.2rem;
+    
   }
 
   .price {
     // margin-top: auto;
     margin-left: auto;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     width: $largeurPrix;
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-self:center;
+    
   }
 
   .font {

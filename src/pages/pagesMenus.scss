@@ -75,10 +75,11 @@ main {
   margin:auto;
   color: white;
   border-radius: 20px;
+  -webkit-appearance: none;
   @include gradient-vertical($secondary, $primary);
   
   &:hover{
-      @include gradient-vertical($secondary, $primary)
+      @include gradient-vertical($primary,$secondary)
   }
   
 }
@@ -91,8 +92,3 @@ main {
 
 
 
-@media screen and (min-width: 1000px) {
-  .menu__details{
-    flex-direction: column;
-}
-}
