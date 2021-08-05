@@ -42,7 +42,6 @@ td, th {
 body {
   margin: auto;
   font-family: 'roboto', sans-serif;
-  background-color: #f6f6f6;
   padding: 5px;
   min-height: 100vh;
   display: grid; }
@@ -70,19 +69,23 @@ figcaption {
   font-weight: bold;
   color: black; }
 
+.grid__container {
+  background-color: #f6f6f6;
+  margin-top: 80px;
+  padding-bottom: 60px; }
+
 @media screen and (min-width: 600px) {
   .menu__descript {
     margin-bottom: 40px; }
   .grid__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-columns: minmax(700px, 2fr);
     gap: 40px; }
   .menu__details {
     align-content: flex-start;
     flex-direction: column; } }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   .menu__details {
     align-content: center;
     flex-direction: column; }
@@ -109,11 +112,10 @@ figcaption {
     justify-content: space-around;
     margin-bottom: 40px; } }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1060px) {
   .menu__descript {
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 40px; }
+    display: grid;
+    grid-template-columns: 1fr; }
   .grid__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -178,6 +180,35 @@ main {
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9356DC', endColorstr='#FFFF79DA', GradientType=0); }
 
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
+
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
 footer {
   background-color: black;
   color: white;
@@ -217,35 +248,6 @@ ul {
 
 .fas {
   font-size: 10px; }
-
-i.fa-heart {
-  font-size: 20px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2.5rem;
-  color: black; }
-  i.fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-position-y: 4rem;
-    -webkit-animation: position 2s forwards;
-    animation: position 2s forwards; }
-
-@-webkit-keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-@keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
 
 /**
  *
@@ -635,6 +637,12 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -669,12 +677,5 @@ article.nouveau::after {
   background-color: #99e2d0;
   width: 4rem;
   height: 2rem;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 80%; }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
