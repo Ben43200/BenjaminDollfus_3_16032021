@@ -636,12 +636,6 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
 img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -678,3 +672,10 @@ article.nouveau::after {
   height: 2rem;
   margin-top: 30px;
   margin-left: 80%; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
