@@ -7,7 +7,13 @@ $secondary: #FF79DA;
 $tertiary : #99E2D0;
 $radius:border-radius 20px;
 
+// *{
+//   margin:0;
+//   padding:0;
+//   border:0;
+//   box-sizing: border-box;
 
+// }
 body{
  
   margin:auto;
@@ -20,7 +26,7 @@ body{
   //  max-width:1024px;
  width:100%;
   // grid-template-columns: auto;
-padding:0px;
+padding:4px;
   // gap:20px;
 // }
 
@@ -107,6 +113,7 @@ figcaption{
 padding-bottom: 60px;
 gap:40px;
 display:grid;
+overflow:hidden;
 }
 
 
