@@ -5,27 +5,59 @@
  * image is given, the image is used as alternative as well 
  */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal; }
 
 ul {
   list-style: none; }
 
-button, input, select {
+button,
+input,
+select {
   margin: 0; }
 
 html {
   box-sizing: border-box; }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit; }
 
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%; }
 
@@ -36,16 +68,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td, th {
+td,
+th {
   padding: 0; }
 
 body {
-  margin: auto;
-  font-family: 'roboto', sans-serif;
+  margin: 0;
+  font-family: "roboto", sans-serif;
   min-height: 100vh;
   display: grid;
-  width: 100%;
-  padding: 4px; }
+  width: 100%; }
+  @media screen and (min-width: 1024px) {
+    body {
+      margin: auto; } }
 
 a {
   color: black;
@@ -57,13 +92,15 @@ a {
   grid-column: 1/-1; }
 
 .card {
-  height: 300px;
+  height: 270px;
   background-color: white;
-  border-radius: 40px;
-  box-shadow: 2px 2px 2px  #e4e4e4;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px #e4e4e4;
   display: grid;
   grid-template-areas: "figure figure" "hgroup coeur";
-  grid-template-columns: 90% 10%; }
+  grid-template-columns: auto 3.5rem; }
+  .card img {
+    border-radius: 1rem 1rem 0 0; }
 
 figcaption {
   margin-top: 20px;
@@ -72,11 +109,11 @@ figcaption {
 
 .grid__container {
   background-color: #f6f6f6;
-  margin-top: 80px;
+  margin-top: 100px;
   padding-bottom: 60px;
   gap: 40px;
   display: grid;
-  overflow: hidden; }
+  padding: 1rem; }
 
 @media screen and (min-width: 660px) {
   .menu__descript {
@@ -158,7 +195,7 @@ main {
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
-  margin-top: -90px; }
+  margin-top: -130px; }
 
 .btn__command {
   display: flex;
@@ -171,20 +208,292 @@ main {
   border-color: #f6f6f6;
   border-radius: 20px;
   background-color: #d46bdb;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
   .btn__command:hover {
     background-color: #be64db;
-    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-image: linear-gradient(to bottom, #9356dc, #ff79da);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9356DC', endColorstr='#FFFF79DA', GradientType=0); }
+
+i.fa-heart {
+  font-size: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2.5rem;
+  color: black; }
+  i.fa-heart:hover {
+    background: -webkit-linear-gradient(#9356dc, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-position-y: 4rem;
+    -webkit-animation: position 2s forwards;
+    animation: position 2s forwards; }
+
+@-webkit-keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+header {
+  background-color: #e8f9f5; }
+  header p {
+    text-align: center; }
+
+/**
+  header{
+    background-color: lighten($tertiary, 20);
+    height: 300px;
+    
+  }**/
+.logo {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px; }
+
+.place {
+  display: flex;
+  background-color: #eaeaea;
+  justify-content: center;
+  padding: 10px;
+  align-content: baseline; }
+  .place .fas {
+    font-size: 15px; }
+
+.fas {
+  margin-right: 10px; }
+
+.accroche_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: space-between;
+  height: 175px; }
+
+/**
+  a{
+   color:black;
+   text-decoration: none;
+  }
+  **/
+.btn {
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  border-color: #f6f6f6;
+  -webkit-appearance: none;
+  background-color: #d46bdb;
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+  .btn:hover {
+    background-color: #be64db;
+    background-image: linear-gradient(to bottom, #9356dc, #ff79da);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9356DC', endColorstr='#FFFF79DA', GradientType=0); }
+
+.descript {
+  font-size: 25px;
+  text-align: center; }
+
+.menu__descript {
+  height: 200px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+.btn__menu {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 2px 2px 2px #e4e4e4;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  background-color: #f6f6f6; }
+  .btn__menu:hover {
+    background-color: #f5edff; }
+  .btn__menu .circle {
+    height: 23px;
+    width: 23px;
+    background: #9356dc;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    margin-left: -0.6rem;
+    padding: 0.15rem; }
+  .btn__menu .fas {
+    color: gray;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    width: 4rem; }
+    .btn__menu .fas:hover {
+      color: #9356dc; }
+
+.title__logo {
+  display: grid;
+  grid-template-areas: "fleche logo .";
+  grid-template-columns: 1fr auto 1fr; }
+  .title__logo a {
+    grid-area: fleche;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+i.fa-arrow-left {
+  font-size: 20px; }
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 340px;
+  width: 100%; }
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+
+header {
+  height: auto;
+  background-color: white;
+  overflow: hidden; }
+  header figure {
+    width: 100vw; }
+
+.card__2 {
+  height: 300px; }
+
+.loader__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: disparition 3s forwards;
+  animation: disparition 3s forwards;
+  overflow: hidden; }
+
+.loader__circle {
+  border: 16px solid transparent;
+  /* Light grey */
+  border-top: 16px solid #99e2d0;
+  /* Blue */
+  border-bottom: 16px solid #9356dc;
+  border-right: 16px solid #ff79da;
+  border-left: 16px solid #7e7e7e;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes disparition {
+  0% {
+    height: 100%; }
+  99% {
+    height: 100%; }
+  100% {
+    height: 0; } }
+
+@keyframes disparition {
+  0% {
+    height: 100%; }
+  99% {
+    height: 100%; }
+  100% {
+    height: 0; } }
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+  @media screen and (min-width: 1024px) {
+    footer {
+      margin-top: 1rem; } }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px; }
+  li {
+    display: flex;
+    align-items: center; } }
+
+.fas {
+  font-size: 10px; }
 
 .plat__info {
   margin-top: 10px;
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px  #e4e4e4;
   border: 1px solid #e4e4e4;
   height: 60px;
   width: 20rem;
@@ -193,7 +502,8 @@ main {
   -webkit-animation: fadein 5s forwards;
   animation: fadein 5s forwards;
   opacity: 0;
-  margin: auto; }
+  margin: auto;
+  box-shadow: 0 0 6px 3px #b1b1b14b; }
   .plat__info:nth-of-type(1) {
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s; }
@@ -257,9 +567,10 @@ main {
     font-size: 0.9rem;
     width: 100%;
     padding-left: 0.4rem; }
-  .plat__info p:first-child {
+  .plat__info h5 {
     font-weight: bold;
-    padding-top: 0.2rem; }
+    padding-top: 0.5rem;
+    padding-left: 0.3rem; }
   .plat__info .price {
     margin-left: auto;
     font-size: 1rem;
@@ -267,7 +578,8 @@ main {
     width: 3rem;
     display: flex;
     justify-content: center;
-    align-self: center; }
+    align-self: center;
+    padding-top: 0.9rem; }
   .plat__info .font {
     width: 0;
     overflow: hidden;
@@ -358,7 +670,7 @@ h4::after {
   content: "";
   display: flex;
   justify-content: space-evenly;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 2rem;
   height: 4px; }
 
@@ -368,286 +680,10 @@ h4::after {
     transition: all 1s;
     background-color: #7e7e7e; } }
 
-i.fa-heart {
-  font-size: 20px;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 2.5rem;
-  color: black; }
-  i.fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-position-y: 4rem;
-    -webkit-animation: position 2s forwards;
-    animation: position 2s forwards; }
-
-@-webkit-keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-@keyframes position {
-  from {
-    background-position-y: 4rem; }
-  to {
-    background-position-y: 2.75rem; } }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
-header {
-  background-color: #e8f9f5; }
-  header p {
-    text-align: center; }
-
-/**
-  header{
-    background-color: lighten($tertiary, 20);
-    height: 300px;
-    
-  }**/
-.logo {
-  display: flex;
-  justify-content: center;
-  color: black;
-  font-family: "Shrikhand", cursive;
-  font-size: 30px; }
-
-.place {
-  display: flex;
-  background-color: #eaeaea;
-  justify-content: center;
-  padding: 10px;
-  align-content: baseline; }
-  .place .fas {
-    font-size: 15px; }
-
-.fas {
-  margin-right: 10px; }
-
-.accroche_title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-  justify-content: space-between;
-  height: 175px; }
-
-/**
-  a{
-   color:black;
-   text-decoration: none;
-  }
-  **/
-.btn {
-  display: flex;
-  align-content: flex-end;
-  font-size: 17px;
-  padding: 10px;
-  margin-top: 20px;
-  color: white;
-  border-radius: 20px;
-  border-color: #f6f6f6;
-  -webkit-appearance: none;
-  background-color: #d46bdb;
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
-  .btn:hover {
-    background-color: #be64db;
-    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9356DC', endColorstr='#FFFF79DA', GradientType=0); }
-
-.descript {
-  font-size: 25px;
-  text-align: center; }
-
-.menu__descript {
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
   height: 200px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.btn__menu {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  border-radius: 20px;
-  width: 300px;
-  box-shadow: 2px 2px 2px #e4e4e4;
-  border: 1px solid #e4e4e4;
-  height: 50px;
-  background-color: #f6f6f6; }
-  .btn__menu:hover {
-    background-color: #f5edff; }
-  .btn__menu .circle {
-    height: 23px;
-    width: 23px;
-    background: #9356dc;
-    text-align: center;
-    color: white;
-    border-radius: 50%;
-    margin-left: -0.6rem;
-    padding: 0.15rem; }
-  .btn__menu .fas {
-    color: gray;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    width: 4rem; }
-    .btn__menu .fas:hover {
-      color: #9356dc; }
-
-.title__logo {
-  display: grid;
-  grid-template-areas: "fleche logo .";
-  grid-template-columns: 1fr auto 1fr; }
-  .title__logo a {
-    grid-area: fleche;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-i.fa-arrow-left {
-  font-size: 20px; }
-
-img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 300px;
-  width: 100%; }
-
-.card__info {
-  display: flex;
-  justify-content: space-between;
-  position: relative; }
-
-header {
-  height: auto;
-  background-color: white;
-  overflow: hidden; }
-  header figure {
-    width: 100vw; }
-
-.loader__container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: disparition 3s forwards;
-  animation: disparition 3s forwards;
-  overflow: hidden; }
-
-.loader__circle {
-  border: 16px solid transparent;
-  /* Light grey */
-  border-top: 16px solid #99E2D0;
-  /* Blue */
-  border-bottom: 16px solid #9356DC;
-  border-right: 16px solid #FF79DA;
-  border-left: 16px solid #7e7e7e;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@-webkit-keyframes disparition {
-  0% {
-    height: 100%; }
-  99% {
-    height: 100%; }
-  100% {
-    height: 0; } }
-
-@keyframes disparition {
-  0% {
-    height: 100%; }
-  99% {
-    height: 100%; }
-  100% {
-    height: 0; } }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
-footer {
-  background-color: black;
-  color: white;
-  margin-top: 50px; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-  @media screen and (min-width: 1024px) {
-    footer {
-      margin-top: 1rem; } }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px; }
-  li {
-    display: flex;
-    align-items: center; } }
-
-.fas {
-  font-size: 10px; }
-
-img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 220px;
   width: 100%; }
 
 section figure {
@@ -680,3 +716,10 @@ article.nouveau::after {
   height: 2rem;
   margin-top: 30px;
   margin-left: 80%; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
