@@ -25,6 +25,8 @@ header {
 .place {
   display: flex;
   background-color: #eaeaea;
+  border-top: 4px solid linear-gradient(#eaeaea,#e4e4e4);
+  border-bottom: 4px solid linear-gradient(#eaeaea,#e4e4e4);
   justify-content: center;
   padding: 10px;
   align-content: baseline;
