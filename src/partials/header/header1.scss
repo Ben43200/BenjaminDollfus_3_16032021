@@ -8,12 +8,7 @@ header {
     
   }
 }
-/**
-  header{
-    background-color: lighten($tertiary, 20);
-    height: 300px;
-    
-  }**/
+
 
 .logo {
   display: flex;
@@ -46,28 +41,8 @@ header {
   height: 175px;
 }
 
-/**
-  a{
-   color:black;
-   text-decoration: none;
-  }
-  **/
-//   .title_logo{
-//    display: grid;
-//   grid-template-areas:  "fleche logo .";
-//  grid-template-columns: 1fr auto 1fr;  
-//   a{
-//     grid-area: fleche ;
-//     display:flex;
-//     justify-content: center;
-//     align-items:center;
-//  }
 
 
-
-
-
-//   }
 .btn {
   display: flex;
   align-content: flex-end;
@@ -101,26 +76,24 @@ header {
 .btn__menu {
   display: flex;
   align-items: center;
-  // position:relative;
-  // text-align: center;
+ 
   font-weight: bold;
   border-radius: 20px;
   width: 300px;
-  // justify-content: center;
+  
   box-shadow: 2px 2px 2px #e4e4e4;
   border: 1px solid #e4e4e4;
   height: 50px;
   background-color: #f6f6f6;; // #f5edff;
   &:hover {
     background-color: #f5edff; //#9356dc;
-    // opacity:0.7;
+    
   }
 
   .circle {
     height: 23px;
     width: 23px;
-    // position: absolute;
-    // right: 287px;
+    
     background: #9356dc;
     text-align: center;
     color: white;
@@ -131,20 +104,18 @@ header {
   .fas {
     color: gray;
     font-size: 15px;
-    // padding-right: 20px;
+    
     display: flex;
     justify-content: center;
     width: 4rem;
     &:hover {
       color: #9356dc;
     }
-    // padding:10px;
+    
   }
 }
 
-// .fas:hover{
-//   color:lighten($primary, 5)
-// }
+
 
 
 .menu__explorez{

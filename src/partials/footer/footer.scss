@@ -3,7 +3,7 @@ footer{
 
     background-color:black;
     color:white;
-    // margin-bottom: 50px;
+   
     margin-top:50px;
    
 
@@ -32,21 +32,17 @@ ul{
     display: flex;
     flex-direction: column;
     align-content: center;
-    // justify-content: space-between;
+    
 }
 
-// li{
-//     display: flex;
-  
-   
-// }
+
 
 
 @media screen and  (min-width: 900px) {
 
     .footer__info{
     display: flex;
-    // flex-direction: row;
+    
     align-content:center;
 
     
@@ -66,20 +62,11 @@ ul{
         display: flex;
         align-items: center;
     }
-  // @media screen and (min-width: 900px){
-  //    .grid__container{
-  //      grid-template-columns: 1fr 1fr;
-  //    }
-  // }
+  
 }
 
     .fas{
        font-size: 10px;
     }
 
-//   @media screen and (min-width: 900px){
-//      .grid__container{
-//        grid-template-columns: 1fr 1fr;
-//      }
-  
-//   }
+
