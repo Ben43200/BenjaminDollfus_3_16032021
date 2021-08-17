@@ -1,54 +1,46 @@
-
 // 1024
 
-h3{
+h3 {
   font-size: 20px;
   font-weight: bold;
 }
 
 .menu__item {
-    @media screen AND (min-width:1024px) {
-        display: flex;
-        justify-content: space-evenly;
-        h4{
-            width: 100%;
-            text-align: center;
-        }
-   
-        
-        .menu__details{
-            width: 33%;
-            justify-content: center;
-        }
+  @media screen AND (min-width: 1024px) {
+    display: flex;
+    justify-content: space-evenly;
+    h4 {
+      width: 100%;
+      text-align: center;
     }
 
-}
-
-
-@media screen and (min-width: 1000px) {
-  .menu__item{
-        // display: flex;
-        justify-content: center;
-        // align-items: flex-start;
-
-
-
-        // flex-direction: column;
-    }
     .menu__details {
-      display: flex;
-      
-      justify-content: space-between;
+      width: 33%;
+      justify-content: center;
     }
   }
+}
 
-  // @media screen and (min-width: 900px){
-  //    .grid__container{
-  //      grid-template-columns:  1fr;
-  //    }
-  // }
+@media screen and (min-width: 1000px) {
+  .menu__item {
+    // display: flex;
+    justify-content: center;
+    // align-items: flex-start;
 
+    // flex-direction: column;
+  }
+  .menu__details {
+    display: flex;
 
+    justify-content: space-between;
+  }
+}
+
+// @media screen and (min-width: 900px){
+//    .grid__container{
+//      grid-template-columns:  1fr;
+//    }
+// }
 
 .title__item {
   display: flex;
@@ -66,30 +58,21 @@ main {
   // z-index:1;
 }
 
-.btn__command{
+.btn__command {
   display: flex;
   align-content: center;
   justify-content: center;
   font-size: 17px;
-  padding:10px;
-  margin:auto;
+  padding: 10px;
+  margin: auto;
   color: white;
-  border-color:#f6f6f6;
+  border-color: #f6f6f6;
   border-radius: 20px;
-  
+
   @include gradient-vertical($secondary, $primary);
-  
-  &:hover{
-      @include gradient-vertical($primary,$secondary)
+
+  &:hover {
+    @include gradient-vertical($primary, $secondary);
+    box-shadow: 0px 5px 10px black;
   }
-  
 }
-
-
-
-
-
-
-
-
-
