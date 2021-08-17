@@ -74,6 +74,13 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
     padding-top:0.5rem;
     // padding-bottom:0.2rem;
     padding-left:0.3rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+
   }
 
 
