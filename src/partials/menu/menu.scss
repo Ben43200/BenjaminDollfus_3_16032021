@@ -197,14 +197,14 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
   display: flex;
 }
 
-h4::after{
-  content: "";
-  display: flex;
-  justify-content: space-evenly;
-  background-color:$tertiary ;
-  width:2rem;
-  height:4px;
-}
+// h4::after{
+//   content: "";
+//   display: flex;
+//   justify-content: space-evenly;
+//   background-color:$tertiary ;
+//   width:2rem;
+//   height:4px;
+// }
 
 
 h4::after{
