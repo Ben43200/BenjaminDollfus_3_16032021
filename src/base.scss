@@ -73,21 +73,14 @@ $secondary: #ff79da;
 $tertiary: #99e2d0;
 $radius: border-radius 20px;
 
-
 body {
   margin: 0;
   font-family: "roboto", sans-serif;
- 
   min-height: 100vh;
   display: grid;
-
-
   background-color: #f6f6f6;
-  
-
-
   width: 100%;
- 
+
   @media screen AND (min-width: 1024px) {
     margin: auto;
   }
@@ -101,7 +94,7 @@ a {
 .restaurant {
   font-weight: bold;
   font-size: 1.5rem;
-  
+
   grid-column: 1/-1;
   margin-top: 40px;
 }
@@ -113,32 +106,21 @@ a {
   display: grid;
   grid-template-areas: "figure figure" "hgroup coeur";
   grid-template-columns: auto 3.5rem;
-  img{
+  img {
     border-radius: 1rem 1rem 0 0;
   }
 }
-
-
-
-
-
 figcaption {
   margin-top: 20px;
   font-weight: bold;
   color: black;
 }
-
-
-
-
 .grid__container {
   background-color: #f6f6f6;
-  // margin-top: 100px;
   padding-bottom: 60px;
   gap: 40px;
   display: grid;
   padding: 1rem;
-  
 }
 
 @media screen and (min-width: 660px) {
@@ -148,13 +130,9 @@ figcaption {
   .grid__container {
     display: grid;
     grid-template-columns: 1fr;
-
     gap: 40px;
-
-   
   }
   .menu__details {
-    
     align-content: flex-start;
     flex-direction: column;
   }
@@ -162,11 +140,9 @@ figcaption {
     padding: 0;
   }
 }
-// 900
+
 @media screen and (min-width: 800px) {
   .menu__details {
-    
-
     align-content: center;
     flex-direction: column;
   }
@@ -175,16 +151,13 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-   
     gap: 40px;
   }
 
   .footer__info {
     margin-left: auto;
   }
-
 }
-
 
 @media screen and (min-width: 1000px) {
   .menu__details {
@@ -197,38 +170,25 @@ figcaption {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 40px;
-    
   }
 }
 
 @media screen and (min-width: 1060px) {
   .menu__descript {
-   
     display: grid;
     grid-template-columns: 1fr;
-
-  
   }
   .grid__container {
     display: grid;
-
-    
-
     grid-template-columns: 1fr 1fr;
-
-
     gap: 40px;
-    // padding: 90px 0px 90px 0px;
   }
 
   .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-   
-    
   }
-  .menu{
+  .menu {
     background-color: #f6f6f6;
   }
- 
 }

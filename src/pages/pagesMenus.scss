@@ -4,31 +4,23 @@ h3 {
   font-size: 20px;
   font-weight: bold;
 }
-.menu__details{
-  h4{
+.menu__details {
+  h4 {
     text-transform: uppercase;
-    padding-top:1.5rem;
-    
+    padding-top: 1.5rem;
   }
 }
 
-h4::after{
+h4::after {
   content: "";
   display: flex;
   justify-content: space-evenly;
-  background-color:$tertiary ;
-  width:2rem;
-  height:4px;
-  margin-top:0.2rem;
-  margin-bottom:1.5rem;
+  background-color: $tertiary;
+  width: 2rem;
+  height: 4px;
+  margin-top: 0.2rem;
+  margin-bottom: 1.5rem;
 }
-
-
-
-
-
-
-
 
 .menu__item {
   @media screen AND (min-width: 1024px) {
@@ -48,9 +40,7 @@ h4::after{
 
 @media screen and (min-width: 1000px) {
   .menu__item {
-    
     justify-content: center;
-   
   }
   .menu__details {
     display: flex;
@@ -58,8 +48,6 @@ h4::after{
     justify-content: space-between;
   }
 }
-
-
 
 .title__item {
   display: flex;
@@ -72,13 +60,8 @@ main {
   border-radius: 30px 30px 0px 0px;
   padding: 20px;
   margin-bottom: 20px;
-  // position: relative;
+  position: relative;
   margin-top: -130px;
- 
-
-
-
- 
 }
 
 .btn__command {
@@ -88,10 +71,6 @@ main {
   font-size: 17px;
   padding: 10px;
   margin: auto;
-  // margin-left: auto;
-  // margin-right: auto;
-  // margin-bottom: 40px;
-
   color: white;
   border-color: #f6f6f6;
   border-radius: 20px;
