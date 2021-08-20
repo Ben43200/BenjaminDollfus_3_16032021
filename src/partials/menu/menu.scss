@@ -8,9 +8,10 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
 
 .plat__info {
   
-  margin-top: 10px;
-
-  
+  // margin-top: 10px;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
   background-color:#ffffff;
   border-radius: 10px;
   
@@ -20,8 +21,9 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
   display: flex;
   overflow: hidden;
   animation: fadein 5s forwards;
+  transition-delay: 5s;
   opacity: 0;
-  margin:auto;
+  // margin:auto;
 
   box-shadow: 0 0 6px 3px #b1b1b14b;
 
@@ -178,12 +180,14 @@ $largeurSpan: #{$largeurCoche + $largeurPrix};
 @keyframes fadein {
   /* sur Safari et Chrome */
   from {
-    margin-top: 30px;
+    // margin-top: 30px;
     opacity: 0;
+    transform:translateY(-50%);
   }
   to {
-    margin-top: 10px;
+    // margin-top: 10px;
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 // 900
