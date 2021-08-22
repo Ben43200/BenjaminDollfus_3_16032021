@@ -1,69 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ohmyfood choisissez votre menu et votre restaurant">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous' />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+    integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+    crossorigin='anonymous' />
 
   <title>Ohmyfood</title>
 </head>
 
 <body>
-  
-  <%- include('../partials/header/loading.html'); %>
-  <h1 class="logo">Ohmyfood</h1>
-  
-  <%- include('../partials/header/header1.html'); %>
-  
-  
-  <section class="grid__container">
-    <h2 class="restaurant">Restaurants</h2>
-    <%- include('../partials/restaurant/restaurant.html',{
-      "image" : "jay-wennington-N_Y88TWmGwA-unsplash",
-      "titre":"la palette du goût",
-      "adresse" : "Menilmontant",
-      "nouveau" : "nouveau",
-      "link" : "la-palette-du-gout",
-    }); %>
-  
-    <%- include('../partials/restaurant/restaurant.html',{
-      "image" : "stil-u2Lp8tXIcjw-unsplash",
-      "titre":"La note enchantée",
-      "adresse" : "Charonne",
-      "nouveau" : "nouveau",
-      "link" : "la-note-enchantee",
-    }); %>
-    
-  
-    <%- include('../partials/restaurant/restaurant.html',{
-      "image" : "toa-heftiba-DQKerTsQwi0-unsplash",
-      "titre":"À la Française",
-      "adresse" : "Cité rouge",
-      "nouveau" : "",
-      "link" : "francaise",
-      
-    }); %>
-    
-    <%- include('../partials/restaurant/restaurant.html',{
-      "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash",
-      "titre":"Le délice des sens",
-      "adresse" : "Folie-Méricourt",
-      "nouveau" : "",
-      "link" : "le-delice-des-sens",
-      
-    }); %>
-  
 
-</section>
-  
-  <footer>
-  <%- include('../partials/footer/footer.html'); %>
-</footer>
+  <%- include('../partials/header/loading.html'); %>
+    <h1 class="logo">Ohmyfood</h1>
+
+    <%- include('../partials/header/header1.html'); %>
+
+
+      <section class="grid__container">
+        <h2 class="restaurant">Restaurants</h2>
+        <%- include('../partials/restaurant/restaurant.html',{ "image" : "jay-wennington-N_Y88TWmGwA-unsplash" , "titre"
+          :"la palette du goût", "adresse" : "Menilmontant" , "nouveau" : "nouveau" , "link" : "la-palette-du-gout" ,
+          }); %>
+
+          <%- include('../partials/restaurant/restaurant.html',{ "image" : "stil-u2Lp8tXIcjw-unsplash" , "titre" :"La
+            note enchantée", "adresse" : "Charonne" , "nouveau" : "nouveau" , "link" : "la-note-enchantee" , }); %>
+
+
+            <%- include('../partials/restaurant/restaurant.html',{ "image" : "toa-heftiba-DQKerTsQwi0-unsplash"
+              , "titre" :"À la Française", "adresse" : "Cité rouge" , "nouveau" : "" , "link" : "francaise" , }); %>
+
+              <%- include('../partials/restaurant/restaurant.html',{ "image"
+                : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash" , "titre" :"Le délice des sens", "adresse"
+                : "Folie-Méricourt" , "nouveau" : "" , "link" : "le-delice-des-sens" , }); %>
+
+
+      </section>
+
+      <footer>
+        <%- include('../partials/footer/footer.html'); %>
+      </footer>
 </body>
+
 </html>

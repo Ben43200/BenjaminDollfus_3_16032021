@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,105 +9,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
   <title>A la française</title>
 </head>
 
 <body>
 
- 
+
   <%- include('../partials/header/loading.html'); %>
 
-<%- include('../partials/header/header2.html',{
-    "image" : "toa-heftiba-DQKerTsQwi0-unsplash"
- 
-  }); %>
-<main>
-  <div class="title__item"> 
-    <h3>À la Française</h3>
-  <i class="far fa-heart"></i>
-  </div> 
-  <!-- <div class="menu__item"> -->
- 
-      <div class="menu__item">
-        <section class="menu__details">
-        <h4>Entrée</h4>
-  <%- include('../partials/menu/menu.html',{
-    "plat":"Tartare de poulpe acidulé",
-    "info" : "Aux zestes d'orange",
-    "price"  : "25€"
-  }); %>
+    <%- include('../partials/header/header2.html',{ "image" : "toa-heftiba-DQKerTsQwi0-unsplash" }); %>
+      <main>
+        <div class="title__item">
+          <h3>À la Française</h3>
+          <i class="far fa-heart"></i>
+        </div>
+
+        <div class="menu__item">
+          <section class="menu__details">
+            <h4>Entrée</h4>
+            <%- include('../partials/menu/menu.html',{ "plat" :"Tartare de poulpe acidulé", "info"
+              : "Aux zestes d'orange" , "price" : "25€" }); %>
 
 
-<%- include('../partials/menu/menu.html',{
-    "plat":"Velouté de légumes d'antan",
-    "info" : "Carotte, panais, topinambour",
-    "price"  : "35€"
-  }); %>
+              <%- include('../partials/menu/menu.html',{ "plat" :"Velouté de légumes d'antan", "info"
+                : "Carotte, panais, topinambour" , "price" : "35€" }); %>
 
-    <%- include('../partials/menu/menu.html',{
-        "plat":"Soupe à l'oignon",
-        "info" : "Revisitée",
-        "price"  : "20€"
-      }); %>
-    
-      </section>
-   
-    <section class="menu__details">
-      <h4>Plats</h4>
-        <%- include('../partials/menu/menu.html',{
-            "plat":"Coquilles Saint-Jacques",
-            "info" : "Accompagnées d'une purée de panais",
-            "price"  : "40€"
-          }); %>
-        
-        
-        <%- include('../partials/menu/menu.html',{
-            "plat":"Magret de canard",
-            "info" : "Et parmentier de pommes de terre",
-            "price"  : "35€"
-          }); %>
-        
-            <%- include('../partials/menu/menu.html',{
-                "plat":"Pigeonneau d’Ille-et-Vilaine",
-                "info" : "Sur son lit de gnocchis aux légumes",
-                "price"  : "44€"
-              }); %>
+                <%- include('../partials/menu/menu.html',{ "plat" :"Soupe à l'oignon", "info" : "Revisitée" , "price"
+                  : "20€" }); %>
+
+          </section>
+
+          <section class="menu__details">
+            <h4>Plats</h4>
+            <%- include('../partials/menu/menu.html',{ "plat" :"Coquilles Saint-Jacques", "info"
+              : "Accompagnées d'une purée de panais" , "price" : "40€" }); %>
 
 
-    </section>
-    
-    <section class="menu__details">
-      <h4>Desserts</h4>
-    <%- include('../partials/menu/menu.html',{
-        "plat":"Pétales de violettes glacés",
-        "info" : "Et purée de noisettes",
-        "price"  : "18€"
-      }); %>
-    
-    
-    <%- include('../partials/menu/menu.html',{
-        "plat":"Fondant au chocolat",
-        "info" : "Revisité",
-        "price"  : "22€"
-      }); %>
-    
-        <%- include('../partials/menu/menu.html',{
-            "plat":"Millefeuille croustillant",
-            "info" : "Myrtilles et pâte d’amande",
-            "price"  : "23€"
-          }); %>
+              <%- include('../partials/menu/menu.html',{ "plat" :"Magret de canard", "info"
+                : "Et parmentier de pommes de terre" , "price" : "35€" }); %>
+
+                <%- include('../partials/menu/menu.html',{ "plat" :"Pigeonneau d’Ille-et-Vilaine", "info"
+                  : "Sur son lit de gnocchis aux légumes" , "price" : "44€" }); %>
 
 
-    </section>
-  </div>
-  
-  </main>
-  <button class="btn__command">Commandez</button>
-<footer>
-<%- include('../partials/footer/footer.html'); %>
-</footer>
+          </section>
+
+          <section class="menu__details">
+            <h4>Desserts</h4>
+            <%- include('../partials/menu/menu.html',{ "plat" :"Pétales de violettes glacés", "info"
+              : "Et purée de noisettes" , "price" : "18€" }); %>
+
+
+              <%- include('../partials/menu/menu.html',{ "plat" :"Fondant au chocolat", "info" : "Revisité" , "price"
+                : "22€" }); %>
+
+                <%- include('../partials/menu/menu.html',{ "plat" :"Millefeuille croustillant", "info"
+                  : "Myrtilles et pâte d’amande" , "price" : "23€" }); %>
+
+
+          </section>
+        </div>
+
+      </main>
+      <button class="btn__command">Commandez</button>
+      <footer>
+        <%- include('../partials/footer/footer.html'); %>
+      </footer>
 
 </body>
+
 </html>

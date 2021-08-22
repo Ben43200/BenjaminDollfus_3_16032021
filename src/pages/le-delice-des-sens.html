@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,103 +9,75 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
   <title>La note enchantée</title>
 </head>
+
 <body>
   <%- include('../partials/header/loading.html'); %>
-  <%- include('../partials/header/header2.html',{
-    "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash"
-   
-  }); %>
-<main>
-<div class="title__item"> 
-  <h3>Le délice des sens</h3>
-  <i class="far fa-heart"></i>
-  </div> 
-   <div class="menu__item">
-      <section class="menu__details">
-        <h4>Entrée</h4>
-  <%- include('../partials/menu/menu.html',{
-    "plat":"Tartare de thon",
-    "info" : "Assaisonné au yuzu",
-    "price"  : "25€"
-  }); %>
+    <%- include('../partials/header/header2.html',{ "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash" }); %>
+      <main>
+        <div class="title__item">
+          <h3>Le délice des sens</h3>
+          <i class="far fa-heart"></i>
+        </div>
+        <div class="menu__item">
+          <section class="menu__details">
+            <h4>Entrée</h4>
+            <%- include('../partials/menu/menu.html',{ "plat" :"Tartare de thon", "info" : "Assaisonné au yuzu"
+              , "price" : "25€" }); %>
 
 
-<%- include('../partials/menu/menu.html',{
-    "plat":"Bouchée de homard croustillant",
-    "info" : "Et sa farandole de petits légumes",
-    "price"  : "35€"
-  }); %>
+              <%- include('../partials/menu/menu.html',{ "plat" :"Bouchée de homard croustillant", "info"
+                : "Et sa farandole de petits légumes" , "price" : "35€" }); %>
 
-    <%- include('../partials/menu/menu.html',{
-        "plat":"Velouté de cèpes ",
-        "info" : "Aux truffes",
-        "price"  : "20€"
-      }); %>
-    
-    
+                <%- include('../partials/menu/menu.html',{ "plat" :"Velouté de cèpes ",
+        " info" : "Aux truffes" , "price" : "20€" }); %>
 
 
-      </section>
-    
-    <section class="menu__details">
-      <h4>Plats</h4>
-        <%- include('../partials/menu/menu.html',{
-            "plat":"Poulet rôti aux herbes de Provence",
-            "info" : "Et sa crème de truffe",
-            "price"  : "40€"
-          }); %>
-        
-        
-        <%- include('../partials/menu/menu.html',{
-            "plat":"Langouste rôtie",
-            "info" : "Et ses légumes de saison",
-            "price"  : "35€"
-          }); %>
-        
-            <%- include('../partials/menu/menu.html',{
-                "plat":"Côte de boeuf Angus",
-                "info" : "Et sa purée de panais",
-                "price"  : "44€"
-              }); %>
 
 
-    </section>
-    
-    <section class="menu__details">
-      <h4>Desserts</h4>
-    <%- include('../partials/menu/menu.html',{
-        "plat":"Farandole de desserts",
-        "info" : "Du chef",
-        "price"  : "18€"
-      }); %>
-    
-    
-    <%- include('../partials/menu/menu.html',{
-        "plat":"Crème brulée",
-        "info" : "Revisitée",
-        "price"  : "22€"
-      }); %>
-    
-        <%- include('../partials/menu/menu.html',{
-            "plat":"Tiramisu",
-            "info" : "À la noisette",
-            "price"  : "23€"
-          }); %>
+          </section>
+
+          <section class="menu__details">
+            <h4>Plats</h4>
+            <%- include('../partials/menu/menu.html',{ "plat" :"Poulet rôti aux herbes de Provence", "info"
+              : "Et sa crème de truffe" , "price" : "40€" }); %>
 
 
-    </section>
-  </div>
-  
-  </main>
-  <button class="btn__command">Commandez</button>
-<footer>
-<%- include('../partials/footer/footer.html'); %>
-</footer>
+              <%- include('../partials/menu/menu.html',{ "plat" :"Langouste rôtie", "info" : "Et ses légumes de saison"
+                , "price" : "35€" }); %>
 
-  
+                <%- include('../partials/menu/menu.html',{ "plat" :"Côte de boeuf Angus", "info"
+                  : "Et sa purée de panais" , "price" : "44€" }); %>
+
+
+          </section>
+
+          <section class="menu__details">
+            <h4>Desserts</h4>
+            <%- include('../partials/menu/menu.html',{ "plat" :"Farandole de desserts", "info" : "Du chef" , "price"
+              : "18€" }); %>
+
+
+              <%- include('../partials/menu/menu.html',{ "plat" :"Crème brulée", "info" : "Revisitée" , "price" : "22€"
+                }); %>
+
+                <%- include('../partials/menu/menu.html',{ "plat" :"Tiramisu", "info" : "À la noisette" , "price"
+                  : "23€" }); %>
+
+
+          </section>
+        </div>
+
+      </main>
+      <button class="btn__command">Commandez</button>
+      <footer>
+        <%- include('../partials/footer/footer.html'); %>
+      </footer>
+
+
 </body>
+
 </html>

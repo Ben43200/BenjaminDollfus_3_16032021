@@ -15,36 +15,33 @@ i.fa-arrow-left {
 }
 img {
   object-fit: cover;
-  // height: 340px;
+
   width: 100%;
 }
 .card__info {
   display: flex;
   justify-content: space-between;
   position: relative;
-  
 }
 
 header {
   height: auto;
   background-color: white;
-  
-  // overflow:hidden; 
-figure{
-  width:100vw;
 
-}
-img{
-  height:300px;
-}
+  figure {
+    width: 100vw;
+  }
+  img {
+    height: 300px;
+  }
 }
 
-.card__2{
-height:300px;
+.card__2 {
+  height: 300px;
 }
 
-.title__item{
-  h3{
+.title__item {
+  h3 {
     font-style: italic;
     font-weight: bold;
   }

@@ -1,74 +1,55 @@
+footer {
+  background-color: black;
+  color: white;
 
-footer{
+  margin-top: 30px;
 
-    background-color:black;
-    color:white;
-   
-    margin-top:30px;
-    // position:sticky;
+  h2 {
+    font-family: "Shrikhand", cursive;
+    font-size: 20px;
+  }
 
-    h2{
-        font-family: 'Shrikhand', cursive;
-        font-size: 20px;
-    }
-
-    @media screen AND (min-width:1024px){
-        // margin-top: 1rem;
-    }
- a{
-     color:white;
- }
+  @media screen AND (min-width: 1024px) {
+  }
+  a {
+    color: white;
+  }
 }
 
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;
+}
 
-.footer__info{
-    
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .footer__info {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 15px;
-}
 
-ul{
+    align-content: center;
+  }
+  ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    
-}
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
 
-
-
-
-@media screen and  (min-width: 900px) {
-
-    .footer__info{
+  li {
     display: flex;
-    
-    align-content:center;
-
-    
-    }
-    ul{
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content:space-around;
-       margin-top: 50px;
-
-  
-
-    }
-
-    li{
-        display: flex;
-        align-items: center;
-    }
-  
+    align-items: center;
+  }
 }
 
-    .fas{
-       font-size: 10px;
-    }
-
-
+.fas {
+  font-size: 10px;
+}
