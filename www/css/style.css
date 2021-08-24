@@ -218,6 +218,7 @@ main {
   border-color: #f6f6f6;
   border-radius: 20px;
   margin-top: -22px;
+  margin-bottom: 40px;
   background-color: #d46bdb;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
   background-repeat: repeat-x;
@@ -257,6 +258,45 @@ i.fa-heart {
     background-position-y: 4rem; }
   to {
     background-position-y: 2.75rem; } }
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 30px; }
+  footer h2 {
+    font-family: "Shrikhand", cursive;
+    font-size: 20px; }
+  footer a {
+    color: white; }
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px; }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
+@media screen and (min-width: 900px) {
+  .footer__info {
+    display: flex;
+    align-content: center; }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px; }
+  li {
+    display: flex;
+    align-items: center; } }
+
+.fas {
+  font-size: 10px; }
 
 header {
   background-color: #e8f9f5; }
@@ -652,45 +692,6 @@ header {
     width: 100%;
     transition: all 1s;
     background-color: #7e7e7e; } }
-
-footer {
-  background-color: black;
-  color: white;
-  margin-top: 30px; }
-  footer h2 {
-    font-family: "Shrikhand", cursive;
-    font-size: 20px; }
-  footer a {
-    color: white; }
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 15px; }
-
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-
-@media screen and (min-width: 900px) {
-  .footer__info {
-    display: flex;
-    align-content: center; }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 50px; }
-  li {
-    display: flex;
-    align-items: center; } }
-
-.fas {
-  font-size: 10px; }
 
 img {
   -o-object-fit: cover;
